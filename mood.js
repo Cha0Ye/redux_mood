@@ -1,7 +1,4 @@
-const confused = '(ﾟヘﾟ)';
-const happy = '(≧▽≦)';
-const sad = 'ಠ⌣ಠ';
-const angry = 'ლಠ益ಠ)ლ';
+
 const defaultMood = '(ノ￣ー￣)ノ';
 const INITIAL_STATE = { mood: defaultMood };
 
@@ -9,16 +6,16 @@ const INITIAL_STATE = { mood: defaultMood };
 function moodReducer(state=INITIAL_STATE, action){
     switch (action.type) {
         case "HAPPY":
-          return { mood: happy };
+          return { mood: action.payload };
     
         case "SAD":
-          return { mood: sad };
+          return { mood: action.payload };
 
         case "ANGRY":
-          return { mood: angry };
+          return { mood: action.payload };
     
         case "CONFUSED":
-          return { mood: confused };
+          return { mood: action.payload };
     
         default:
           return state;
