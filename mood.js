@@ -24,6 +24,3 @@ function moodReducer(state=INITIAL_STATE, action){
 
 let moodStore = Redux.createStore(moodReducer);
 
-moodStore.subscribe(() => {
-  console.log('state updated', moodStore);
-})
